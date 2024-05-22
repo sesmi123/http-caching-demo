@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cache Demo</title>
+</head>
+<body>
+    <button onclick="fetchData('/no-store')">No Store</button>
+    <button onclick="fetchData('/private')">Private</button>
+    <button onclick="fetchData_custom('/private', 'no-cache')">Reload Private Data</button>
+    <button onclick="fetchData_custom('/private', 'reload')">Force-Reload Private Data</button>
+    <button onclick="fetchData('/no-cache')">No Cache</button>
+    <button onclick="fetchData('/max-age')">Max-Age</button>
+    <button onclick="fetchData('/immutable')">Immutable</button>
+    <button onclick="fetchData('/etag')">ETag Example</button>
+    <button onclick="fetchData('/vary', { 'Accept-Language': 'en' })">Vary-Accept-Language:en</button>
+    <button onclick="fetchData('/vary', { 'Accept-Language': 'de' })">Vary-Accept-Language:de</button>
+    <pre id="result"></pre>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
